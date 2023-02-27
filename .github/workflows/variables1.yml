@@ -1,0 +1,22 @@
+name: Environment variable
+
+on: 
+     workflow_dispatch:
+
+jobs:
+  variable:
+    runs-on: ubuntu-latest
+
+    steps:
+     - uses: actions/checkout@v2
+      
+
+     - name: check env
+       uses: SiyaaJhawar/learning-/action.yml@main
+       with:
+          envkey_ENVIRONMENT: ${{env.ENVIRONMENT}}
+          envkey_URL: ${{env.URL}}
+          file_name: .env
+     - name: Verify envfile
+       run: |
+           echo: "$env.ENVIRONMENT"

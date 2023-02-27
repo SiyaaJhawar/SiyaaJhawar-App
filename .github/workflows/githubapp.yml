@@ -1,0 +1,50 @@
+name: "githubapp"
+on:
+  push:
+    tags:
+      - '**'
+  workflow_dispatch:
+ 
+
+
+env:
+   PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+   TOKEN: ${{secrets.TOKEN}}
+
+jobs:
+  create-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - run : npm install axios
+    - run : npm install jsonwebtoken
+    - run : npm install dotenv
+      
+ 
+ 
+     
+    
+
+  #- run : npm install @octokit/rest
+    -  run : node jsonweb.js
+ 
+    - run : node Installation.js
+    - run : node githubapp.js
+    - run : node pipe.js
+   
+   
+     
+       
+      
+     
+       
+    
+
+      

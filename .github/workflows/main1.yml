@@ -1,0 +1,23 @@
+name: Call a reusable workflow
+
+on:
+  
+
+ workflow_dispatch:
+
+jobs:
+  call-workflow:
+    uses: SiyaaJhawar/learning-/.github/workflows/main.yml@main
+    with:
+     
+       username: swati
+          
+    secrets:  
+      token: secrets 
+        
+       
+      
+      
+   
+       
+ 

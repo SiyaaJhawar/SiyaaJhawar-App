@@ -1,0 +1,19 @@
+name: "webhook"
+ 
+on:
+  push:
+    tags:
+      - '**'
+  workflow_dispatch:
+ 
+ 
+jobs:
+  run-updater:
+    runs-on: ubuntu-latest
+    steps:
+    - name: REST API with curl
+      run: |
+        curl -s "https://www.boredapi.com/api/activity" | jq '.activity, .type'
+        
+        
+        

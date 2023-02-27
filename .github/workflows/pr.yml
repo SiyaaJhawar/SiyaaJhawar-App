@@ -1,0 +1,22 @@
+name: "pullrequest"
+
+on:
+  pull_request:
+    types: [opened]
+  workflow_dispatch:
+jobs:
+  pull_request:
+    runs-on: ubuntu-latest
+
+   
+   
+     
+
+    steps:
+   
+      - name: Add a comment to the pull request
+        uses: actions/checkout@v3
+    
+      - run : |
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

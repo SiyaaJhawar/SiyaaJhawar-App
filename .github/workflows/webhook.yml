@@ -1,0 +1,116 @@
+name: "Hit a webhook"
+ 
+on:
+  push:
+    
+  workflow_dispatch:
+ 
+ 
+jobs:
+  first-job:
+    name: Build with Node
+    runs-on: ubuntu-latest
+  
+    steps:
+    # - run: node --version
+    # - run: npm --version
+     - uses: actions/checkout@v3
+     - run: npm install
+     - run: npm install xmlhttprequest
+    # - run: npm install xhr2
+     
+     - run: node json.js
+    
+      #run: |
+         #  SiyaaJhawar/learning-/json.js
+         # response=$(curl https://www.boredapi.com/api/activity)
+         #  echo "response from curl= $response"
+           
+          # Map myMap = response;
+            # myMap.forEach(key, value) {
+             #  print('$key : $value');
+         #  }; 
+         # result = $.parseJSON(response);
+           # $.each(result, function(k, v) {
+
+               # alert(k + ' is ' + v);
+          #  });
+         #  for (key, value) in response {
+
+          #    println("key: \(key), value: \(value)")
+
+         #  }
+
+            
+              #  if not response:
+              #  print("invalid json" )
+               # else:
+               # print("key:" + key,"value": + value)
+         
+              #for (k, v) in response():
+            #  print("Key: " + k)
+            # print("Value: " + v)
+  
+            
+        # response=curl https://www.boredapi.com/api/activity -header "Accept= application/json")         
+        #  echo "response from curl= $response"  
+        # curl -Ss ""
+        #curl "https://www.boredapi.com/api/activity"
+        #variables.json = curl -s "https://www.boredapi.com/api/activity"
+       # var=$(curl -s  "https://www.boredapi.com/api/activity")
+     
+         #var keys=JSON.parse(response.body).keys();
+         #var value=keys[0];
+       
+     
+         # for activity in $( echo "$json" | jq '.activity{}') ; do 
+          #  echo curl ... ${"https://www.boredapi.com/api/activity"}...
+         # done 
+        
+      #  curl -Ss "https://www.boredapi.com/api/activity"
+        # jq -r '.[] | @https://www.boredapi.com/api/activity' |\
+        # while read api
+       #  do
+         #   curl -Ss "https://www.boredapi.com/api/activity"
+         #done | jq 'if type == "array" then .[] | .id elif type == "object" then .id else empty end'
+         
+         
+        
+         
+      
+         # if let dictionary   = json.object {
+  
+         #   for (key, value) in dictionary {
+
+           #   println("key: \(key), value: \(value)")
+
+         #  }
+
+          #  }
+         
+        
+        
+       
+        
+        
+               
+            
+              
+           
+        
+         
+         
+        
+        
+        
+        
+        
+        
+         
+        
+ 
+
+   
+       
+         
+       

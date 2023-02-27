@@ -1,0 +1,52 @@
+on: 
+  workflow_dispatch:
+    inputs:
+     url:
+        description: 'Request URL'
+        required: true
+     method:
+        description: 'Request Method'
+        required: true
+        default: 'POST'
+     contentType:
+        description: 'Content Type'
+        required: false
+     data:
+        description: 'Request Body as JSON String'
+        required: true
+        default: '{}'
+     files:
+        description: 'Map of absolute file paths as JSON String'
+        required: true
+        default: '{}'
+     
+     username:
+        description: 'Auth Username'
+        required: false
+     password:
+         description: 'Auth Password'
+         required: false
+    
+     bearerToken:
+        description: 'Bearer Authentication Token'
+        required: false
+     customHeaders:
+        description: 'Custom HTTP Headers'
+        required: false
+     
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Make Request
+      id: myRequest
+      uses: SiyaaJhawar/learning-@main
+      with:
+       url: "http://yoursite.com/api"
+
+    - name: Show Response
+      run: |
+        echo ${{ steps.myRequest.outputs.response }}
+        echo ${{ steps.myRequest.outputs.headers }}
+        echo ${{ fromJson(steps.myRequest.outputs.response).field_you_want_to_access }}
+   
